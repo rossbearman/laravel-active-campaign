@@ -1,6 +1,6 @@
 # Laravel ActiveCampaign
 
-[![Latest Stable Version](https://poser.pugx.org/rossbearman/laravel-active-campaign/v/stable?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
+[![Latest Stable Version](https://poser.pugx.org/rossbearman/laravel-active-campaign/v/stable?style=flat-square)](https://packagist.org/packages/rossbearman/laravel-active-campaign)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 This package provides a simple interface to the ActiveCampaign API v3. It is a continuation of the original laravel-active-campaign package by [Tjardoo/Label84](https://github.com/tjardoo) and can easily be [migrated](#migrating-from-label84activecampaign).  
@@ -21,10 +21,9 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
 
 ## Laravel Support
 
-| Version | Release  |
-|---------|----------|
-| 10.x    | 1.3, 1.2 |
-| 9.x     | 1.1      |
+| Version | Release |
+|---------|---------|
+| 10.x    | 1.3     |
 
 ## Installation
 
