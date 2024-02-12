@@ -18,10 +18,10 @@
       "illuminate/support": "^9.0|^10.0"
     },
     "require-dev": {
-      "laravel/pint": "^1.0",
-      "orchestra/testbench": "^7.0|^8.0",
-      "nunomaduro/larastan": "^2.0",
-      "phpunit/phpunit": "^9.5"
+        "larastan/larastan": "^2.8",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^7.0|^8.0",
+        "phpunit/phpunit": "^9.5"
     },
     "autoload": {
       "psr-4": {
@@ -29,7 +29,6 @@
       }
     },
     "scripts": {
-      "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
       "analyse": "vendor/bin/phpstan analyse",
       "format": "vendor/bin/pint"
     },
@@ -42,6 +41,10 @@
             "ActiveCampaign": "RossBearman\\ActiveCampaign\\Facades\\ActiveCampaign"
         }
       }
+    },
+    "config": {
+      "sort-packages": true,
+      "preferred-install": "dist"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

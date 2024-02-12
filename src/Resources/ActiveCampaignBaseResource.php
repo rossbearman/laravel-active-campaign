@@ -31,7 +31,9 @@ class ActiveCampaignBaseResource
             /** @var Response $response */
             $response = $this->client->$method($path, $data);
 
-            return $response->throw()->json($responseKey);
+            $responseBody = $response->throw()->json($responseKey);
+
+            return is_array($responseBody) ? $responseBody : [$responseBody];
         } catch (RequestException $exception) {
             throw new ActiveCampaignException($exception->response);
         }
