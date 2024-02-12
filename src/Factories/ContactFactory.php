@@ -1,8 +1,8 @@
 <?php
 
-namespace Label84\ActiveCampaign\Factories;
+namespace RossBearman\ActiveCampaign\Factories;
 
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignContact;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignContact;
 
 class ContactFactory
 {

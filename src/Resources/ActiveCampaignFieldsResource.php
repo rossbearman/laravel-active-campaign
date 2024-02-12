@@ -1,11 +1,11 @@
 <?php
 
-namespace Label84\ActiveCampaign\Resources;
+namespace RossBearman\ActiveCampaign\Resources;
 
 use Illuminate\Support\Collection;
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignField;
-use Label84\ActiveCampaign\Exceptions\ActiveCampaignException;
-use Label84\ActiveCampaign\Factories\FieldFactory;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignField;
+use RossBearman\ActiveCampaign\Exceptions\ActiveCampaignException;
+use RossBearman\ActiveCampaign\Factories\FieldFactory;
 
 class ActiveCampaignFieldsResource extends ActiveCampaignBaseResource
 {

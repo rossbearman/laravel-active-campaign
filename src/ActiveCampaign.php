@@ -1,14 +1,14 @@
 <?php
 
-namespace Label84\ActiveCampaign;
+namespace RossBearman\ActiveCampaign;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
-use Label84\ActiveCampaign\Resources\ActiveCampaignContactsResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignFieldsResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignFieldValuesResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignListsResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignTagsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignContactsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignFieldsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignFieldValuesResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignListsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignTagsResource;
 
 class ActiveCampaign
 {

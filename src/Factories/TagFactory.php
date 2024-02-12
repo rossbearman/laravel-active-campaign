@@ -1,8 +1,8 @@
 <?php
 
-namespace Label84\ActiveCampaign\Factories;
+namespace RossBearman\ActiveCampaign\Factories;
 
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignTag;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignTag;
 
 class TagFactory
 {

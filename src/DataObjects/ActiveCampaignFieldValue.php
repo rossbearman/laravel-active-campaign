@@ -1,6 +1,6 @@
 <?php
 
-namespace Label84\ActiveCampaign\DataObjects;
+namespace RossBearman\ActiveCampaign\DataObjects;
 
 class ActiveCampaignFieldValue
 {

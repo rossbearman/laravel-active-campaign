@@ -1,11 +1,11 @@
 <?php
 
-namespace Label84\ActiveCampaign\Resources;
+namespace RossBearman\ActiveCampaign\Resources;
 
 use Illuminate\Support\Collection;
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignTag;
-use Label84\ActiveCampaign\Exceptions\ActiveCampaignException;
-use Label84\ActiveCampaign\Factories\TagFactory;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignTag;
+use RossBearman\ActiveCampaign\Exceptions\ActiveCampaignException;
+use RossBearman\ActiveCampaign\Factories\TagFactory;
 
 class ActiveCampaignTagsResource extends ActiveCampaignBaseResource
 {

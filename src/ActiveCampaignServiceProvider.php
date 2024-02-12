@@ -1,6 +1,6 @@
 <?php
 
-namespace Label84\ActiveCampaign;
+namespace RossBearman\ActiveCampaign;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;

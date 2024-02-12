@@ -1,6 +1,6 @@
 <?php
 
-namespace Label84\ActiveCampaign\Exceptions;
+namespace RossBearman\ActiveCampaign\Exceptions;
 
 use Illuminate\Http\Client\RequestException;
 

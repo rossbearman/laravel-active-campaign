@@ -1,12 +1,12 @@
 <?php
 
-namespace Label84\ActiveCampaign\Resources;
+namespace RossBearman\ActiveCampaign\Resources;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
-use Label84\ActiveCampaign\ActiveCampaign;
-use Label84\ActiveCampaign\Exceptions\ActiveCampaignException;
+use RossBearman\ActiveCampaign\ActiveCampaign;
+use RossBearman\ActiveCampaign\Exceptions\ActiveCampaignException;
 
 class ActiveCampaignBaseResource
 {

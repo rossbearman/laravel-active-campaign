@@ -1,10 +1,10 @@
 <?php
 
-namespace Label84\ActiveCampaign\Resources;
+namespace RossBearman\ActiveCampaign\Resources;
 
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignFieldValue;
-use Label84\ActiveCampaign\Exceptions\ActiveCampaignException;
-use Label84\ActiveCampaign\Factories\FieldValueFactory;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignFieldValue;
+use RossBearman\ActiveCampaign\Exceptions\ActiveCampaignException;
+use RossBearman\ActiveCampaign\Factories\FieldValueFactory;
 
 class ActiveCampaignFieldValuesResource extends ActiveCampaignBaseResource
 {

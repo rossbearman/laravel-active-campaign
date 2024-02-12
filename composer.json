@@ -1,5 +1,5 @@
 {
-    "name": "label84/laravel-active-campaign",
+    "name": "rossbearman/laravel-active-campaign",
     "description": "Add Active Campaign to your Laravel application.",
     "type": "library",
     "license": "MIT",
@@ -7,6 +7,10 @@
       {
         "name": "Label84",
         "email": "info@label84.com"
+      },
+      {
+        "name": "Ross Bearman",
+        "email": "ross@rossbearman.co.uk"
       }
     ],
     "require": {
@@ -21,7 +25,7 @@
     },
     "autoload": {
       "psr-4": {
-          "Label84\\ActiveCampaign\\": "src"
+          "RossBearman\\ActiveCampaign\\": "src"
       }
     },
     "scripts": {
@@ -32,10 +36,10 @@
     "extra": {
       "laravel": {
           "providers": [
-              "Label84\\ActiveCampaign\\ActiveCampaignServiceProvider"
+              "RossBearman\\ActiveCampaign\\ActiveCampaignServiceProvider"
           ],
           "aliases": {
-            "ActiveCampaign": "Label84\\ActiveCampaign\\Facades\\ActiveCampaign"
+            "ActiveCampaign": "RossBearman\\ActiveCampaign\\Facades\\ActiveCampaign"
         }
       }
     },

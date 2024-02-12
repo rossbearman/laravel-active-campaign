@@ -1,12 +1,12 @@
 <?php
 
-namespace Label84\ActiveCampaign\Facades;
+namespace RossBearman\ActiveCampaign\Facades;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Facade;
-use Label84\ActiveCampaign\Resources\ActiveCampaignContactsResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignFieldValuesResource;
-use Label84\ActiveCampaign\Resources\ActiveCampaignTagsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignContactsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignFieldValuesResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignTagsResource;
 
 /**
  * @method PendingRequest makeRequest()
@@ -18,6 +18,6 @@ class ActiveCampaign extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return \Label84\ActiveCampaign\ActiveCampaign::class;
+        return \RossBearman\ActiveCampaign\ActiveCampaign::class;
     }
 }
