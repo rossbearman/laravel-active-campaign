@@ -1,17 +1,22 @@
 name: PHPStan
 
 on:
+  pull_request:
+    paths:
+      - '**.php'
+      - 'phpstan.neon.dist'
   push:
     paths:
       - '**.php'
       - 'phpstan.neon.dist'
+  workflow_dispatch:
 
 jobs:
   phpstan:
     name: phpstan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
@@ -20,7 +25,9 @@ jobs:
           coverage: none
 
       - name: Install composer dependencies
-        uses: ramsey/composer-install@v1
+        uses: ramsey/composer-install@v2
+        with:
+          dependency-versions: "highest"
 
       - name: Run PHPStan
         run: ./vendor/bin/phpstan --error-format=github
