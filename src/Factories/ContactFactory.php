@@ -12,7 +12,7 @@ class ContactFactory
     public static function make(array $attributes): ActiveCampaignContact
     {
         return new ActiveCampaignContact(
-            intval($attributes['id']),
+            (int) $attributes['id'],
             $attributes['email'],
             $attributes['phone'],
             $attributes['firstName'],

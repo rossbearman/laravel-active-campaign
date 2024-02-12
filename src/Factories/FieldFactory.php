@@ -9,7 +9,7 @@ class FieldFactory
     public static function make(array $attributes): ActiveCampaignField
     {
         return new ActiveCampaignField(
-            intval($attributes['id']),
+            (int) $attributes['id'],
             $attributes['title'],
             $attributes['descript'],
             $attributes['type'],

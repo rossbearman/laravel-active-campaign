@@ -12,7 +12,7 @@ class FieldValueFactory
     public static function make(array $attributes): ActiveCampaignFieldValue
     {
         return new ActiveCampaignFieldValue(
-            intval($attributes['id']),
+            (int) $attributes['id'],
             $attributes['field'],
             $attributes['value'],
         );

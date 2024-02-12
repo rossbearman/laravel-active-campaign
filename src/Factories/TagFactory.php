@@ -12,7 +12,7 @@ class TagFactory
     public static function make(array $attributes): ActiveCampaignTag
     {
         return new ActiveCampaignTag(
-            intval($attributes['id']),
+            (int) $attributes['id'],
             $attributes['tag'],
             $attributes['description'],
         );
