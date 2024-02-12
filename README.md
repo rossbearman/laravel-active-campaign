@@ -1,9 +1,7 @@
 # Laravel ActiveCampaign
 
-[![Latest Stable Version](https://poser.pugx.org/label84/laravel-active-campaign/v/stable?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
+[![Latest Stable Version](https://poser.pugx.org/rossbearman/laravel-active-campaign/v/stable?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
-[![Quality Score](https://img.shields.io/scrutinizer/g/label84/laravel-active-campaign.svg?style=flat-square)](https://scrutinizer-ci.com/g/label84/laravel-active-campaign)
-[![Total Downloads](https://img.shields.io/packagist/dt/label84/laravel-active-campaign.svg?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
 
 This package provides a simple interface to the ActiveCampaign API v3. It is a continuation of the original laravel-active-campaign package by [Tjardoo/Label84](https://github.com/tjardoo) and can easily be [migrated](#migrating-from-label84activecampaign).  
 
@@ -301,7 +299,7 @@ ActiveCampaign::tags()->update($tag);
 ActiveCampaign::tags()->delete(100);
 ```
 
-## Tests
+## Code Quality
 
 ```sh
 ./vendor/bin/phpstan analyse
