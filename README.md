@@ -1,11 +1,3 @@
-> [!WARNING]
->
-> This package is no longer maintained.
->
-> We have decided to stop maintaining this package. We don't use ActiveCampaign anymore and don't have the time to maintain this package.
->
-> Feel free to fork our code and adapt it to your needs.
-
 # Laravel ActiveCampaign
 
 [![Latest Stable Version](https://poser.pugx.org/label84/laravel-active-campaign/v/stable?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
@@ -13,13 +5,14 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/label84/laravel-active-campaign.svg?style=flat-square)](https://scrutinizer-ci.com/g/label84/laravel-active-campaign)
 [![Total Downloads](https://img.shields.io/packagist/dt/label84/laravel-active-campaign.svg?style=flat-square)](https://packagist.org/packages/label84/laravel-active-campaign)
 
-This package provides a simple interface to the ActiveCampaign API v3.
+This package provides a simple interface to the ActiveCampaign API v3. It is a continuation of the original laravel-active-campaign package by [Tjardoo/Label84](https://github.com/tjardoo) and can easily be [migrated](#migrating-from-label84activecampaign).  
 
-Currently the packages only supports the endpoints `Contacts`, `Custom Fields`, `Custom Fields Values`, `Tags` and `Lists`. Feel free to PR the remaining endpoints.
+The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Values`, `Tags` and `Lists`. Feel free to open a pull request to add support for other endpoints.
 
 - [Laravel Support](#laravel-support)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Migrating from Label84/ActiveCampaign](#migrating-from-label84activecampaign)
 - [Examples](#examples)
   - [Contacts](#contacts)
   - [Custom Fields](#custom-fields)
@@ -30,23 +23,23 @@ Currently the packages only supports the endpoints `Contacts`, `Custom Fields`, 
 
 ## Laravel Support
 
-| Version | Release |
-|---------|---------|
-| 10.x    | 1.2     |
-| 9.x     | 1.1     |
+| Version | Release  |
+|---------|----------|
+| 10.x    | 1.3, 1.2 |
+| 9.x     | 1.1      |
 
 ## Installation
 
 ### 1. Install the package via composer
 
 ```sh
-composer require label84/laravel-active-campaign
+composer require rossbearman/laravel-active-campaign
 ```
 
 ### 2. Publish the config file
 
 ```sh
-php artisan vendor:publish --provider="Label84\ActiveCampaign\ActiveCampaignServiceProvider" --tag="config"
+php artisan vendor:publish --provider="RossBearman\ActiveCampaign\ActiveCampaignServiceProvider" --tag="config"
 ```
 
 ### 3. Add the base URL and API key to your .env
@@ -56,6 +49,9 @@ ACTIVE_CAMPAIGN_BASE_URL=
 ACTIVE_CAMPAIGN_API_KEY=
 ```
 
+## Migrating from Label84/ActiveCampaign
+The only change required to migrate to v1.3 is replacing `Label84` with `RossBearman` in namespaces and requiring `rossbearman/laravel-active-campaign` instead of `label84/laravel-active-campaign` in your `composer.json` file.
+
 ## Usage
 
 - [Active Campaign API Documentation](https://developers.activecampaign.com/reference)
@@ -64,7 +60,7 @@ ACTIVE_CAMPAIGN_API_KEY=
 Access via facade:
 
 ```php
-use Label84\ActiveCampaign\Facades\ActiveCampaign;
+use RossBearman\ActiveCampaign\Facades\ActiveCampaign;
 
 // Usage
 $contact = ActiveCampaign::contacts()->get(1);
@@ -73,7 +69,7 @@ $contact = ActiveCampaign::contacts()->get(1);
 Resolve directly out of the container:
 
 ```php
-use Label84\ActiveCampaign\ActiveCampaign;
+use RossBearman\ActiveCampaign\ActiveCampaign;
 
 // Usage
 $contact = resolve(ActiveCampaign::class)->contacts()->get(1);
@@ -82,7 +78,7 @@ $contact = resolve(ActiveCampaign::class)->contacts()->get(1);
 Inject into a constructor or method via [automatic injection](https://laravel.com/docs/10.x/container#automatic-injection):
 
 ```php
-use Label84\ActiveCampaign\ActiveCampaign;
+use RossBearman\ActiveCampaign\ActiveCampaign;
 
 class ContactController extends Controller
 {
@@ -95,7 +91,7 @@ class ContactController extends Controller
 
 ## Examples
 
-The following examples use the facade for simplicity and assume `Label84\ActiveCampaign\Facades\ActiveCampaign` has been imported.
+The following examples use the facade for simplicity and assume `RossBearman\ActiveCampaign\Facades\ActiveCampaign` has been imported.
 
 ### Contacts
 
@@ -138,7 +134,7 @@ $contact = ActiveCampaign::contacts()->sync('info@example.com', [
 #### Update an existing contact
 
 ```php
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignContact;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignContact;
 
 $contact = new ActiveCampaignContact(
     id: 1,
@@ -205,7 +201,7 @@ $fieldValueId = ActiveCampaign::fieldValues()->create(
 #### Update an existing field value
 
 ```php
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignFieldValue;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignFieldValue;
 
 $fieldValue = new ActiveCampaignFieldValue(
     contactId: 1,
@@ -243,7 +239,7 @@ $fieldId = ActiveCampaign::fields()->create(
 #### Update an existing field
 
 ```php
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignField;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignField;
 
 $fieldValue = new ActiveCampaignField(
     id: 1,
@@ -288,7 +284,7 @@ $tag = ActiveCampaign::tags()->create(
 #### Update an existing tag
 
 ```php
-use Label84\ActiveCampaign\DataObjects\ActiveCampaignTag;
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignTag;
 
 $tag = new ActiveCampaignTag(
     id: 100,
