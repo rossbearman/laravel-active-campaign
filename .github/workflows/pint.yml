@@ -1,25 +1,29 @@
-name: Fix PHP code style issues
+name: Enforce code style
 
 on:
   pull_request:
     paths:
       - '**.php'
+      - 'pint.json'
   push:
     paths:
       - '**.php'
+      - 'pint.json'
   workflow_dispatch:
 
 jobs:
-  php-code-styling:
+  pint:
     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref_name }}
+    permissions:
+      contents: write
 
-      - name: Fix PHP code style issues
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Run Laravel Pint
         uses: aglipanci/laravel-pint-action@2.0.0
 
       - name: Commit changes
