@@ -9,14 +9,14 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
 
 - [Laravel Support](#laravel-support)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Migrating from Label84/ActiveCampaign](#migrating-from-label84activecampaign)
+- [Usage](#usage)
 - [Examples](#examples)
   - [Contacts](#contacts)
   - [Custom Fields](#custom-fields)
   - [Custom Field Values](#custom-field-values)
   - [Tags](#tags)
-- [Tests](#tests)
+- [Code Quality](#code-quality)
 - [License](#license)
 
 ## Laravel Support
@@ -24,6 +24,7 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
 | Version | Release |
 |---------|---------|
 | 10.x    | 1.3     |
+| 11.x    | 1.3.1   |
 
 ## Installation
 
@@ -59,7 +60,6 @@ Access via facade:
 ```php
 use RossBearman\ActiveCampaign\Facades\ActiveCampaign;
 
-// Usage
 $contact = ActiveCampaign::contacts()->get(1);
 ```
 
@@ -68,7 +68,6 @@ Resolve directly out of the container:
 ```php
 use RossBearman\ActiveCampaign\ActiveCampaign;
 
-// Usage
 $contact = resolve(ActiveCampaign::class)->contacts()->get(1);
 ```
 
@@ -81,7 +80,6 @@ class ContactController extends Controller
 {
     public function __construct(private readonly ActiveCampaign $activeCampaign) { }
 
-    // Usage
     $this->activeCampaign->contacts()->get(1);
 }
 ```
