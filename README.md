@@ -25,6 +25,7 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
 |---------|---------|
 | 10.x    | 1.3     |
 | 11.x    | 1.3.1   |
+| 12.x    | 1.3.2   |
 
 ## Installation
 
