@@ -18,8 +18,7 @@ class ActiveCampaign
         public int $timeout,
         public ?int $retryTimes = null,
         public ?int $retrySleep = null,
-    ) {
-    }
+    ) {}
 
     public function makeRequest(): PendingRequest
     {

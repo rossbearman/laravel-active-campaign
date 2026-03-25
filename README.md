@@ -21,11 +21,12 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
 
 ## Laravel Support
 
-| Version | Release |
-|---------|---------|
-| 10.x    | 1.3     |
-| 11.x    | 1.3.1   |
-| 12.x    | 1.3.2   |
+| Version | PHP  | Release |
+|---------|------|---------|
+| 10.x    | 8.1+ | 1.3     |
+| 11.x    | 8.1+ | 1.3.1   |
+| 12.x    | 8.1+ | 1.3.2   |
+| 13.x    | 8.3+ | 2       |
 
 ## Installation
 

@@ -8,6 +8,5 @@ class ActiveCampaignFieldValue
         public readonly int $contactId,
         public readonly string $field,
         public readonly string $value,
-    ) {
-    }
+    ) {}
 }

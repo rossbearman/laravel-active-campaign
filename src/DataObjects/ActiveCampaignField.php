@@ -23,6 +23,5 @@ class ActiveCampaignField
         public readonly ?array $options,
         public readonly ?array $relations,
         public readonly ?array $links,
-    ) {
-    }
+    ) {}
 }
