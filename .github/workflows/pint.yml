@@ -11,6 +11,10 @@ on:
       - 'pint.json'
   workflow_dispatch:
 
+concurrency:
+  group: pint-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   pint:
     runs-on: ubuntu-latest
