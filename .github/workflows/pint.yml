@@ -29,7 +29,17 @@ jobs:
       - name: Run Laravel Pint
         uses: aglipanci/laravel-pint-action@2.0.0
 
+      - name: Detect changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Commit changes
+        if: steps.changes.outputs.has_changes == 'true' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Fix code formatting
+          commit_message: "Fix code formatting"
