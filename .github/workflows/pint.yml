@@ -3,11 +3,11 @@ name: Enforce code style
 on:
   pull_request:
     paths:
-      - '**.php'
+      - '**/*.php'
       - 'pint.json'
   push:
     paths:
-      - '**.php'
+      - '**/*.php'
       - 'pint.json'
   workflow_dispatch:
 
