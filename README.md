@@ -5,7 +5,7 @@
 
 This package provides a simple interface to the ActiveCampaign API v3. It is a continuation of the original laravel-active-campaign package by [Tjardoo/Label84](https://github.com/tjardoo) and can easily be [migrated](#migrating-from-label84activecampaign).  
 
-The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Values`, `Tags` and `Lists`. Feel free to open a pull request to add support for other endpoints.
+The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Values`, `Tags`, `Lists` and `Messages`. Feel free to open a pull request to add support for other endpoints.
 
 - [Laravel Support](#laravel-support)
 - [Installation](#installation)
@@ -16,6 +16,7 @@ The package currently supports `Contacts`, `Custom Fields`, `Custom Fields Value
   - [Custom Fields](#custom-fields)
   - [Custom Field Values](#custom-field-values)
   - [Tags](#tags)
+  - [Messages](#messages)
 - [Code Quality](#code-quality)
 - [License](#license)
 
@@ -296,6 +297,78 @@ ActiveCampaign::tags()->update($tag);
 
 ```php
 ActiveCampaign::tags()->delete(100);
+```
+
+### Messages
+
+#### Retrieve an existing message
+
+```php
+$message = ActiveCampaign::messages()->get('1');
+```
+
+#### List all messages, or filter messages by query defined criteria
+
+```php
+$messages = ActiveCampaign::messages()->list();
+$firstTenMessages = ActiveCampaign::messages()->list('limit=10');
+```
+
+#### Create a message
+
+Any additional fields supported by the API, such as `subject`, `preheader_text`, `name`, `text` and
+`html`, can be passed via `$attributes`.
+
+```php
+$messageId = ActiveCampaign::messages()->create(
+    fromname: 'John Doe',
+    fromemail: 'info@example.com',
+    reply2: 'reply@example.com',
+    attributes: [
+        'subject' => 'Welcome aboard',
+        'html' => '<p>Thanks for signing up.</p>',
+    ],
+);
+```
+
+#### Update an existing message
+
+Only the writable fields (`name`, `fromname`, `fromemail`, `reply2`, `subject`, `preheader_text`,
+`text` and `html`) are sent to the API.
+
+```php
+use RossBearman\ActiveCampaign\DataObjects\ActiveCampaignMessage;
+
+$message = new ActiveCampaignMessage(
+    id: '1',
+    userid: null,
+    name: 'Welcome email',
+    fromname: 'John Doe',
+    fromemail: 'info@example.com',
+    reply2: 'reply@example.com',
+    subject: 'A new subject',
+    preheader_text: 'Thanks for signing up',
+    text: 'Thanks for signing up.',
+    html: '<p>Thanks for signing up.</p>',
+    charset: null,
+    encoding: null,
+    format: null,
+    priority: null,
+    hidden: null,
+    cdate: null,
+    mdate: null,
+);
+
+ActiveCampaign::messages()->update($message);
+```
+
+Note that when a message is edited through the API, the ActiveCampaign preview window and email
+builder will not show the updated contents.
+
+#### Delete an existing message
+
+```php
+ActiveCampaign::messages()->delete('1');
 ```
 
 ## Code Quality
