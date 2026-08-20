@@ -8,6 +8,7 @@ use RossBearman\ActiveCampaign\Resources\ActiveCampaignContactsResource;
 use RossBearman\ActiveCampaign\Resources\ActiveCampaignFieldsResource;
 use RossBearman\ActiveCampaign\Resources\ActiveCampaignFieldValuesResource;
 use RossBearman\ActiveCampaign\Resources\ActiveCampaignListsResource;
+use RossBearman\ActiveCampaign\Resources\ActiveCampaignMessagesResource;
 use RossBearman\ActiveCampaign\Resources\ActiveCampaignTagsResource;
 
 class ActiveCampaign
@@ -60,5 +61,10 @@ class ActiveCampaign
     public function lists(): ActiveCampaignListsResource
     {
         return new ActiveCampaignListsResource($this);
+    }
+
+    public function messages(): ActiveCampaignMessagesResource
+    {
+        return new ActiveCampaignMessagesResource($this);
     }
 }
