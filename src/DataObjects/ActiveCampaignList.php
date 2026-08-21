@@ -15,6 +15,5 @@ class ActiveCampaignList
         public readonly ?string $subscription_notify,
         public readonly ?string $unsubscription_notify,
         public readonly ?int $user,
-    ) {
-    }
+    ) {}
 }

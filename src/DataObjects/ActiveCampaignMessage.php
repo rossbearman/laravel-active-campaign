@@ -22,6 +22,5 @@ class ActiveCampaignMessage
         public readonly ?string $hidden,
         public readonly ?string $cdate,
         public readonly ?string $mdate,
-    ) {
-    }
+    ) {}
 }

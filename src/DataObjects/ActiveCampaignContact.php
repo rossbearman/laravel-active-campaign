@@ -10,6 +10,5 @@ class ActiveCampaignContact
         public readonly ?string $phone,
         public readonly ?string $firstName,
         public readonly ?string $lastName,
-    ) {
-    }
+    ) {}
 }
